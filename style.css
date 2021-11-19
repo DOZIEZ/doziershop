@@ -1,0 +1,312 @@
+
+*,
+*::before,
+*::after{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    box-sizing: border-box;
+    
+}
+
+
+
+li,a{
+   list-style: none;
+   text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.contenaire{margin: 0px auto;
+    overflow: hidden;
+
+}
+
+
+
+
+/* le style du nom du site dozier shop */
+
+.container{
+    background-color: rgb(59, 218, 230);
+    top: 0px;
+    padding-bottom: 40px;
+}
+
+h1{
+    font-size: 100px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 1px gray;
+    width: 100vw;
+}
+
+ .container span{
+    color:orangered;
+}
+
+ #menu{
+    width: 60px;
+    height:  30px;
+    font-size: 10px;
+    background-color: red;
+   
+    visibility: hidden;
+}  
+
+.fermer{
+    visibility: hidden;
+}
+
+ul{
+    border-right: 5px solid rgba(9, 23, 216, 0.638);
+    border-top: 5px solid rgba(9, 23, 216, 0.638);
+    display: flex;
+    justify-content: space-between;
+    transition:  1s;
+    background-color: rgba(9, 23, 216, 0.638);
+
+}
+    
+.actualite a{
+        font-size: 20px;
+        color: red;
+    }
+
+
+/* adaptation a l'egrant de l'android le nom de la boutique */
+
+@media only screen and (max-width:600px){
+
+    h1{
+        font-size: 50px;
+        text-align: center;
+        color: white;
+        padding-top: 30px;
+        text-shadow: 1px 1px 1px gray;
+        
+        
+    }
+    #menu{
+        visibility: visible;
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+        transition: 1s;
+    }
+
+    
+
+    ul{
+
+        
+        display:inline-block;
+        height: 100%;
+        width: 15rem;
+        /* margin-left: 0px; */
+        margin-left: -290px;
+        
+    }
+
+    .actualite a{
+        font-size: 40px;
+        color: white;
+    }
+
+     .fermer{
+        visibility: visible;
+        width: 60px;
+        height: 30px;
+        position: relative;
+        left: 177px;
+        background-color: red;
+        color: white;
+        border: 1px solid white;
+    } 
+    .fermer{
+        
+        margin-left: 0px;
+    }
+    
+}
+
+/* -------------------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.image img{
+
+    width: 230px;
+    height: 230px;
+}
+
+.produits{
+    
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 5px;
+}
+
+.promo{
+  margin: 50px 50px;
+  font-size: 25px;
+  position: relative;
+  /* top:-500px; */
+  z-index: 200;
+
+
+}
+ .promo span{
+    font-size: 50px;
+    color: orangered;
+}
+
+
+ #btn{
+
+
+    width: 40%;
+    height: 40px;
+    border-style: none;
+    border-radius: 20px;
+    background-color: rgb(95, 220, 95);
+    box-shadow: 2px 2px 2px gray;
+    
+
+}
+
+ button a {
+    font-size: 10px;
+    color: white;
+    text-shadow: 0.5px 0px 0.5px white;
+    letter-spacing: 2px;
+    transition: 1s;
+}
+
+.produits{
+    display: grid;
+    grid-template-columns:25% 25% 25% 25%;
+    margin: 10px 10px;
+    padding: 10px;
+}
+
+
+
+/* adaptation des image des produit a l'ecran d'android */
+
+ @media only screen and (max-width:600px){
+
+  .produits{
+      display:block;
+      padding-left: 50px;
+      margin: 10px;
+      
+  }
+
+  .image img{
+
+    width: 250px;
+    height: 250px;
+}
+
+
+ .promo{
+    margin: 50px 50px;
+    font-size: 25px;
+    position: relative;
+    top:-500px;
+    z-index: -1;
+  
+}
+
+.mo{
+    visibility: hidden;
+    transition: 1s;
+ }
+
+.ma{
+    visibility: visible;
+ }
+
+.menu{
+    background-color: red;
+    opacity: 0;
+ } 
+ #btn{
+     margin-bottom: 10px;
+ }
+
+ 
+ 
+}
+  
+  
+
+
+
+
+ /* ---------------------------------------------------------------------------------------------------
+ ------------------------------------------------------------------------------------------------- */
+
+
+
+/* --------------------------------------------------------------------------------------------------------------------------
+------------------------------------- */
+.footer{
+    display: grid;
+   grid-template-columns: 25% 25% 25% 25%;
+    gap: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.General{
+    background-color: rgba(116, 201, 226, 0.645);
+}
+.footer-center a{
+    color:black;
+}
+
+.footer-center h5{
+
+    color: red;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font: 30px;
+}
+.copyright{
+    font-size: 14px;
+    color: gray;
+    position: relative;
+    left: 360px;
+    margin-top: 40px;
+}
+
+.copyright p{
+    text-align: center;
+}
+@media only screen and (max-width:600px){
+    .footer{
+        display: block;
+        padding: auto;
+        margin: auto;
+        height: auto;
+    }
+    .footer-center a:link,
+    .footer-center a:visited{
+        display: block;
+    }
+    .copyright{
+        font-size: 14px;
+        color: gray;
+        position: inherit;
+        left: inherit;
+        margin-top: 80px;
+    }
+
+}

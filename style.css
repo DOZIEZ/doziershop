@@ -1,23 +1,73 @@
 
-*,
-*::before,
-*::after{
-    margin: 0px;
-    padding: 0px;
+a{
+    text-decoration: none;
+}
+*{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-html{
-    box-sizing: border-box;
+p{
+    font-weight: 700;
+    color: red;
+    text-shadow: 1px 5px -1px gray;
+    font-size: 15px ;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.logo{
+    color: #fff;
+    font-weight: bold;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+
+.logo span{
+    color: red;
     
 }
+.navbar{
+    display: flex;
+    position: relative;
 
-
-
-li,a{
-   list-style: none;
-   text-decoration: none;
 }
+
+.navbar li{
+    list-style: none;
+
+}
+.navbar a{
+    color: #ffff;
+    text-decoration: none;
+    margin-left: 30px;
+    font-weight: 700;
+}
+
+
+
+header .navbar li a:hover{
+    color:red;
+    border-bottom: 2px solid red;
+}
+
 
 img{
     max-width: 100%;
@@ -28,113 +78,48 @@ img{
     overflow: hidden;
 
 }
-
-
-
-
-/* le style du nom du site dozier shop */
-
-.container{
+header{
     background-color: rgb(59, 218, 230);
-    top: 0px;
-    padding-bottom: 40px;
 }
 
-h1{
-    font-size: 100px;
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 1px gray;
-    width: 100vw;
-}
-
- .container span{
-    color:orangered;
-}
-
- #menu{
-    width: 60px;
-    height:  30px;
-    font-size: 10px;
-    background-color: red;
-   
-    visibility: hidden;
-}  
-
-.fermer{
-    visibility: hidden;
-}
-
-ul{
-    border-right: 5px solid rgba(9, 23, 216, 0.638);
-    border-top: 5px solid rgba(9, 23, 216, 0.638);
-    display: flex;
-    justify-content: space-between;
-    transition:  1s;
-    background-color: rgba(9, 23, 216, 0.638);
-
-}
-    
-.actualite a{
-        font-size: 20px;
-        color: red;
-    }
 
 
 /* adaptation a l'egrant de l'android le nom de la boutique */
 
 @media only screen and (max-width:600px){
 
-    h1{
-        font-size: 50px;
-        text-align: center;
-        color: white;
-        padding-top: 30px;
-        text-shadow: 1px 1px 1px gray;
-        
-        
+  
+   
+    .logo{
+        color: #fff;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
     }
-    #menu{
-        visibility: visible;
-        background-color: red;
-        color: white;
-        border: 1px solid white;
-        transition: 1s;
-    }
-
-    
-
-    ul{
-
-        
-        display:inline-block;
-        height: 100%;
-        width: 15rem;
-        /* margin-left: 0px; */
-        margin-left: -290px;
-        
-    }
-
-    .actualite a{
-        font-size: 40px;
-        color: white;
-    }
-
-     .fermer{
-        visibility: visible;
-        width: 60px;
-        height: 30px;
+    .navbar{
+        display: block;
         position: relative;
-        left: 177px;
-        background-color: red;
-        color: white;
-        border: 1px solid white;
-    } 
-    .fermer{
-        
-        margin-left: 0px;
-    }
+        left: 50%;
+        bottom: -80px;
     
+    }
+    header .navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        padding: 20px;
+        width: 100%;
+        z-index: 1;
+        display: inherit;
+        justify-content: space-between;
+        align-items: center;
+        transition: 0.5s;
+        
+    }
+
+    header .navbar{
+        visibility: hidden;
+    }
 }
 
 /* -------------------------------------------------------------------------------------------------------------------------------- */
@@ -152,6 +137,17 @@ ul{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
     gap: 5px;
+   
+
+}
+.produit{
+    box-sizing: border-box;
+    border: 2px solid whitesmoke;
+    margin: 10px 20px;
+    padding-left: 17px;
+    box-shadow: -3px 3px 6px grey;
+    background-color: whitesmoke;
+    border-radius: 30px;
 }
 
 .promo{
@@ -178,7 +174,9 @@ ul{
     border-radius: 20px;
     background-color: rgb(95, 220, 95);
     box-shadow: 2px 2px 2px gray;
-    
+    position: relative;
+    left: 25%;
+    bottom: 10px;
 
 }
 
@@ -202,12 +200,20 @@ ul{
 /* adaptation des image des produit a l'ecran d'android */
 
  @media only screen and (max-width:600px){
+     .produit{
+        margin-bottom: 20px;
+     }
 
   .produits{
       display:block;
-      padding-left: 50px;
-      margin: 10px;
+      padding-left: 10px;
+      margin: 5px 5px;
+     
       
+  }
+  .image{
+      gap: 20px;
+
   }
 
   .image img{
@@ -241,12 +247,21 @@ ul{
  } 
  #btn{
      margin-bottom: 10px;
+     width: 80px;
+ }
+ #btn a{
+     font-size: 8px;
  }
 
  
  
 }
   
+
+h5{
+text-decoration: underline;
+color:rgb(46, 208, 248);
+}
   
 
 
@@ -283,12 +298,14 @@ ul{
     font-size: 14px;
     color: gray;
     position: relative;
-    left: 360px;
+    left: 150%;
     margin-top: 40px;
 }
 
 .copyright p{
     text-align: center;
+    font-size: 10px;
+    color: gray;
 }
 @media only screen and (max-width:600px){
     .footer{
@@ -309,4 +326,56 @@ ul{
         margin-top: 80px;
     }
 
+}
+
+
+
+.animation img{
+    width: 100px;
+    height: 75px;
+    position: fixed;
+    left: 250px;
+    top: 0px;
+    z-index: 1000;
+}
+h4{
+
+    color: violet;
+    text-align: center;
+    text-shadow: 1px 3px -1px grey;
+}
+.article{
+    border: none;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 200px;
+}
+.cercle{
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blue;
+    margin: 5px 10px;
+}
+
+h2{
+    font-size: 20px ;
+    left: 40px;
+    position: relative;
+}
+.article ul{
+
+    margin: 40px 40px;
+}
+.article p{
+    margin: 0px 20px;
+}
+.info a{
+    text-decoration: inherit;
+    font-size: 10px;
+    margin-left: 25vw;
+}
+.article #btn{
+    width: 100px;
 }
